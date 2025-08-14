@@ -38,25 +38,24 @@ function App() {
 
   return (
     <>
-      <h1>Welcome to Sebin's countdown</h1>
+      <h1>Welcome to Tommy's countdown</h1>
       <div className="card">
         <h1 style={{ fontSize: "3rem" }}>{getEmoji()}</h1>
-        <h2>5-Minute Countdown</h2>
+        <h2>5 Minute Countdown</h2>
         <div style={{ fontSize: "2rem", margin: "20px 0" }}>
-          {minutes.toString().padStart(2, "0")}:
-          {seconds.toString().padStart(2, "0")}
+          {minutes.toString().padStart(2, "0")}:{seconds.toString().padStart(2, "0")}
         </div>
         <div>
           <button onClick={handleStartStop} style={{ marginRight: "10px" }}>
             {isRunning ? "Pause" : "Start"}
           </button>
-          <button onClick={handleReset}>Reset</button>
+          <button onClick={handleReset}>Start Again!</button>
         </div>
         <p style={{ marginTop: "20px" }}>
           {timeLeft === 0
-            ? "Time's up! 🎉"
+            ? "Beep Boop! Times Up! 🎉"
             : isRunning
-            ? "Tick tock... ⏳"
+            ? "Clickity clack... Can't get that time back.. ⏳"
             : "Ready to start? 🚀"}
         </p>
       </div>
